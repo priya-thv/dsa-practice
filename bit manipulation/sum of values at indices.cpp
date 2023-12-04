@@ -1,0 +1,24 @@
+class Solution {
+public:
+     int countSetBits(int n) // Copied, so revise
+    {
+        int count = 0;
+        while (n) {
+            count += n & 1;
+            n >>= 1;
+        }
+        return count;
+    }
+    int sumIndicesWithKSetBits(vector<int>& nums, int k) {
+        
+        int t=0;
+        
+        for(int i=0;i<nums.size();i++){
+            if(countSetBits(i) == k){
+                t+=nums[i];
+            }
+        }
+        
+        return t;
+    }
+};
