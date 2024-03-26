@@ -17,7 +17,7 @@ public:
         int weight = 0;
         key[0] = 0;
         parent[0] = -1;
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 0; i < n - 1; i++) {   //loop run for n-1 edges
             int u = -1;
             for (int v = 0; v < n; v++) { // Corrected the loop condition here
                 if (!visited[v] && (u == -1 || key[v] < key[u])) {
