@@ -20,3 +20,16 @@ public:
         return count;
     }
 };
+
+
+OR
+
+class Solution {
+public:
+    int minFlips(int a, int b, int c) {
+        int x=a&b;
+        int y=(a|b)^c;
+        int z=x&y;
+        return __builtin_popcount(y)+__builtin_popcount(z);
+    }
+};
